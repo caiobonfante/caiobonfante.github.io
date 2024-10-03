@@ -6,12 +6,36 @@
 <body>
     <h1>Olá, mundo! 5</h1>
     <p>Bem-vindo ao meu site GitHub Pages!</p>
-    <script nonce="bcd07bae2874b49ec1b03fff6698efbc" src='https://scripts.gomerlin.com.br/merlin-staging.js'></script>
-    <script>
-      Merlin.Fullpage.initFromSource("https://stagingtools.gomerlin.com.br/chat/4ccec319-db1d-4263-82e9-22b72c40055e");
-    </script>
-                  
-                
-            
+    <script nonce="6d1fe6d3c49a51e8aff0e7a1e1bc4d77" src='https://scripts.gomerlin.com.br/merlin-staging.js'></script>
+<script>
+  Merlin.Fullpage.initFromSource("https://stagingtools.gomerlin.com.br/chat/e5cdb7b8-27f9-465e-8ad3-19af90b6da86");
+</script>
+              
+              
+<script>
+  window.addEventListener("message", function(event){
+    if (!event.data.event_id) {
+      return;
+    }
+
+    switch (event.data.event_id) {
+		case "chatting":
+        // evento do GTM
+				alert('chatting');
+	      break;
+
+		case "lead":
+        // evento do GTM
+				dataLayer.push({'event': 'lead'});
+	      break;
+
+		case "converteuWpp":
+        // evento do GTM
+				dataLayer.push({'event': 'converteuWpp'});
+	      break;
+    }
+  }, false);
+</script>             
+
 </body>
 </html>
